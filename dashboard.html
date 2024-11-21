@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-11/12 mx-auto pt-4 pb-4">
+        <h1 class="text-center text-3xl font-bold mb-4 text-blue-700">Dashboard</h1>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+            <div class="btn btn-success">
+                <p>Current Balance</p>
+                <button class="btn btn-sm btn-outline bg-white">$ <span>0</span></button>
+            </div>
+            <div class="btn btn-primary">
+                <p>Total Deposit</p>
+                <button class="btn btn-sm btn-outline bg-white">$ <span>0</span></button>
+            </div>
+            <div class="btn btn-error">
+                <p>Total Withdraw</p>
+                <button class="btn btn-sm btn-outline bg-white">$ <span>0</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="w-11/12 mx-auto pt-4 pb-4">
+        <div role="tablist" class="tabs tabs-lifted">
+            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Deposit"  />
+            <div role="tabpanel" class="tab-content bg-base-100  shadow-xl border-base-300 rounded-box p-6">
+                <div class="card bg-base-100 w-full">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Amount</span>
+                            </label>
+                            <input type="number" placeholder="Enter Withdrawal Amount" class="input input-bordered" id="email" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button type="button" class="btn btn-success text-white font-bold">Deposit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Withdraw" />
+            <div role="tabpanel" class="tab-content bg-base-100 shadow-xl border-base-300 rounded-box p-6">
+                <div class="card bg-base-100 w-full">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Amount</span>
+                            </label>
+                            <input type="number" placeholder="Enter Withdrawal Amount" class="input input-bordered" id="email" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button type="button" class="btn btn-error font-bold">Withdraw</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
