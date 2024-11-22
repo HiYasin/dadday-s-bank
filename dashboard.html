@@ -15,56 +15,60 @@
         <div class="flex flex-col sm:flex-row justify-center gap-6">
             <div class="btn btn-success">
                 <p>Current Balance</p>
-                <button class="btn btn-sm btn-outline bg-white">$ <span>0</span></button>
+                <button class="btn btn-sm btn-outline bg-white">$ <span id="balance">0.00</span></button>
             </div>
             <div class="btn btn-primary">
                 <p>Total Deposit</p>
-                <button class="btn btn-sm btn-outline bg-white">$ <span>0</span></button>
+                <button class="btn btn-sm btn-outline bg-white">$ <span id="totalDeposit">0.00</span></button>
             </div>
             <div class="btn btn-error">
                 <p>Total Withdraw</p>
-                <button class="btn btn-sm btn-outline bg-white">$ <span>0</span></button>
+                <button class="btn btn-sm btn-outline bg-white">$ <span id="totalWithdraw">0.00</span></button>
             </div>
         </div>
     </div>
     <div class="w-11/12 mx-auto pt-4 pb-4">
         <div role="tablist" class="tabs tabs-lifted">
-            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Deposit"  checked="checked"/>
-            <div role="tabpanel" class="tab-content bg-base-100  shadow-xl border-base-300 rounded-box p-6">
+            <input type="radio" name="my_tabs_2" role="tab" class="tab [--tab-border-color:#34d399]" aria-label="Deposit"  checked="checked"/>
+            <div role="tabpanel" class="tab-content bg-base-100  shadow-xl border-[#34d399] rounded-box p-6">
                 <div class="card bg-base-100 w-full">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Amount</span>
                             </label>
-                            <input type="number" placeholder="Enter Withdrawal Amount" class="input input-bordered" id="email" required />
+                            <input type="text" placeholder="Enter Withdrawal Amount" class="input input-bordered border-[#34d399] focus:outline-[#34d399]" id="deposit" required />
                         </div>
                         <div class="form-control mt-6">
-                            <button type="button" class="btn btn-success text-white font-bold">Deposit</button>
+                            <button type="button" class="btn btn-success text-white font-bold" id="depositBtn">Deposit</button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Withdraw" />
-            <div role="tabpanel" class="tab-content bg-base-100 shadow-xl border-base-300 rounded-box p-6">
+            <input type="radio" name="my_tabs_2" role="tab" class="tab [--tab-border-color:#f87171]" aria-label="Withdraw" style="border-bottom: none;"/>
+            <div role="tabpanel" class="tab-content bg-base-100 shadow-xl border-[#f87171] rounded-box p-6">
                 <div class="card bg-base-100 w-full">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Amount</span>
                             </label>
-                            <input type="number" placeholder="Enter Withdrawal Amount" class="input input-bordered" id="email" required />
+                            <input type="text" placeholder="Enter Withdrawal Amount" class="input input-bordered border-[#f87171] focus:outline-[#f87171]" id="withdraw" required />
                         </div>
                         <div class="form-control mt-6">
-                            <button type="button" class="btn btn-error font-bold">Withdraw</button>
+                            <button type="button" class="btn btn-error font-bold" id="withdrawBtn">Withdraw</button>
                         </div>
                     </form>
                 </div>
             </div>
 
         </div>
+        <div class="mt-4" id="messege">
+
+        </div>
     </div>
+    <script src="transaction.js"></script>
 </body>
 
 </html>
